@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to the Quiz</h1>
+        <form id="loginForm" onsubmit="return startQuiz(event)">
+            <label for="username">Enter your name:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="School/collage">Enter your collage name:</label>
+            <input type="text" id="collagename" name="collagename" required>
+            <button type="submit">Start Quiz</button>
+        </form>
+    </div>
+    
+    <script>
+        function startQuiz(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            window.location.href = 'instructions.html';
+        }
+    </script>
+
+</body>
+</html>

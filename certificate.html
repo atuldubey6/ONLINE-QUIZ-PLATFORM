@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="certificateForm">
+            <label for="name">Enter Your Name:</label>
+            <input type="text" id="name" required>
+            <button type="submit">Generate Certificate</button>
+        </form>
+        <div id="certificate" class="certificate" style="display: none;">
+            <h2>Certificate of Completion</h2>
+            <p>This certifies that</p>
+            <h3 id="certName"></h3>
+            <p>has completed the quiz on</p>
+            <p id="certDate"></p>
+            <button id="downloadBtn">Download Certificate</button>
+        </div>
+        <a href="feedback.html" class="feedback-btn">Give Us Your Feedback</a>
+    </div>
+    <script src="certificate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+</body>
+</html>
